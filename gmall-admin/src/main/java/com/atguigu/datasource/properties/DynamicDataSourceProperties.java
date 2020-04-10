@@ -9,6 +9,7 @@
 package com.atguigu.datasource.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -19,6 +20,7 @@ import java.util.Map;
  * @author Mark sunlightcs@gmail.com
  * @since 1.0.0
  */
+@Component
 @ConfigurationProperties(prefix = "dynamic")
 public class DynamicDataSourceProperties {
     private Map<String, DataSourceProperties> datasource = new LinkedHashMap<>();
